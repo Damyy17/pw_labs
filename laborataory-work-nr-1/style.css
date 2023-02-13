@@ -162,8 +162,18 @@ header .icons {
   background-color: #f3e1d1;
   color: #e06331;
 }
+.arrow-down {
+  background-image: url(icons/arrow_down.png);
+  background-size: 100%;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  cursor: pointer;
+  margin-top: 100px;
+}
 .phone-backround {
-  background-image: url("/images/orange_half.png");
+  background-image: url("/laborataory-work-nr-1/images/orange_half.png");
   background-size: 850px;
   background-position: 119px;
   position: absolute;
