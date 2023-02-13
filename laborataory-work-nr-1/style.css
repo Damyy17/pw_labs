@@ -1,0 +1,732 @@
+/* add your CSS here */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
+
+body {
+  background-image: url("images/main-backround.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+main {
+  display: flex;
+  margin: 48px 170px;
+}
+.section-article-buttons-phone {
+  height: 95vh;
+  overflow-y: hidden;
+}
+.navBar-article-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 115px;
+}
+header {
+  position: absolute;
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+}
+header nav {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+header nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+header nav ul li {
+  list-style: none;
+}
+header nav ul li a {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-decoration: none;
+  color: #e06331;
+}
+header .icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.search-icon {
+  width: 32px;
+  height: 32px;
+  background-image: url("/icons/Search\ Icon.svg");
+  background-size: cover;
+}
+.cart-icon {
+  width: 32px;
+  height: 32px;
+  background-image: url("/icons/Cart\ Icon.svg");
+  background-size: cover;
+}
+.backround-elemets {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+}
+.backround-elemets img {
+  position: absolute;
+}
+.decoration-orange {
+  width: 100px;
+  height: 100px;
+  left: 70px;
+  top: 185px;
+}
+.strawberry1 {
+  left: -58px;
+  top: 568px;
+  transform: rotate(83.47deg);
+}
+.strawberry2 {
+  left: 815px;
+  top: -105px;
+  transform: rotate(-89.82deg);
+}
+.decoration-white {
+  z-index: 10;
+  top: 676px;
+  left: 1778px;
+}
+.pear {
+  left: 915px;
+  top: 645px;
+  transform: rotate(-25.1deg);
+}
+.article-buttons {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 90vh;
+}
+.article-buttons p {
+  width: fit-content;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 120px;
+  line-height: 141px;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  color: #e06331;
+}
+.article-buttons article {
+  width: 460px;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14.285px;
+  line-height: 17px;
+  text-align: center;
+  color: #2f2e33;
+}
+.article-buttons .buttons-conatiner {
+  width: fit-content;
+  display: flex;
+  gap: 40px;
+}
+.article-buttons .buttons-conatiner button {
+  border-radius: 20px;
+  border-color: #2f2e33;
+  border-style: solid;
+  border-width: 4px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  padding: 7px 30px;
+  cursor: pointer;
+}
+.article-buttons .buttons-conatiner button:nth-child(1) {
+  background-color: #e06331;
+  color: #f3e1d1;
+}
+.article-buttons .buttons-conatiner button:nth-child(2) {
+  background-color: #f3e1d1;
+  color: #e06331;
+}
+.phone-backround {
+  background-image: url("/images/orange_half.png");
+  background-size: 850px;
+  background-position: 119px;
+  position: absolute;
+  left: 1150px;
+  top: -48px;
+  height: 929px;
+  background-repeat: no-repeat;
+  width: 60%;
+  display: flex;
+  align-items: center;
+}
+.phone-backround img {
+  width: 242px;
+  height: auto;
+}
+.phone-backround p {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 23.632px;
+  line-height: 28px;
+  color: #f3e1d1;
+  margin-left: 300px;
+  transform: rotate(90deg);
+}
+.section-article-buttons-fruits {
+  height: 750px;
+  position: relative;
+}
+.article-button {
+  height: 80vh;
+  background-color: #e06331;
+  border-top: 3px solid #2f2e33;
+  border-bottom: 3px solid #2f2e33;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  justify-content: center;
+  align-items: center;
+}
+
+.article-button p {
+  font-family: "Raleway";
+  margin: 0;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+  text-align: center;
+}
+.article-button .title {
+  font-family: "Raleway";
+  color: #eee0d1;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 90px;
+  line-height: 117px;
+  text-align: center;
+}
+
+.article-button article {
+  width: 591px;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #eee0d1;
+  text-align: center;
+}
+
+.article-button button {
+  border-radius: 20px;
+  border-color: #2f2e33;
+  border-style: solid;
+  border-width: 4px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  padding: 7px 30px;
+  cursor: pointer;
+  background-color: #f3e1d1;
+  color: #e06331;
+  cursor: pointer;
+}
+.background-elements-2 {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+}
+.background-elements-2 div {
+  position: absolute;
+}
+.decoration-white-2 {
+  z-index: 10;
+  background-image: url(images/decoration_white.png);
+  background-size: 80%;
+  width: 128px;
+  height: 128px;
+}
+.decoration-white-2:nth-child(1) {
+  top: 80px;
+  left: -20px;
+}
+.decoration-white-2:nth-child(2) {
+  top: 553px;
+  left: 1770px;
+}
+.fruit {
+  z-index: 10;
+  background-image: url(images/fruit.png);
+  background-size: 100%;
+  width: 285px;
+  height: 188px;
+  top: 48px;
+  left: 1601px;
+}
+.banana {
+  z-index: 10;
+  background-image: url(images/bananas.png);
+  background-size: 100%;
+  width: 222px;
+  height: 253px;
+  left: 24px;
+  top: 388px;
+  transform: rotate(-30.65deg);
+}
+path {
+  fill: transparent;
+}
+
+.section-products {
+  font-family: "Raleway";
+  color: #e06331;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  height: 1950px;
+  margin: 50px 170px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+}
+.title-section-3 {
+  background-image: url(images/title_section_3.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding: 100px 0;
+  width: 714px;
+}
+
+.product-grid {
+  margin: 0;
+}
+
+.background-elements-3 {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+}
+.background-elements-3 div {
+  position: absolute;
+}
+.decoration-orange-3 {
+  z-index: 10;
+  background-image: url(images/decoratino_orange.png);
+  background-size: 80%;
+  width: 128px;
+  height: 128px;
+}
+.decoration-orange-3:nth-child(1) {
+  left: -6px;
+  top: 662px;
+}
+.decoration-orange-3:nth-child(2) {
+  top: 1330px;
+  left: 10px;
+}
+.decoration-orange-3:nth-child(3) {
+  top: 430px;
+  left: 1780px;
+}
+.decoration-orange-3:nth-child(4) {
+  top: 1200px;
+  left: 1760px;
+}
+.product {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.product-view {
+  background-size: 187px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 187px;
+  height: 279px;
+  padding: 64px 106px;
+  border: #2f2e33 solid 3px;
+  border-radius: 30px;
+}
+.fruit1 {
+  background-image: url(images/pear.png);
+}
+.fruit2 {
+  background-image: url(images/strawberry.png);
+}
+.fruit3 {
+  background-image: url(images/fruit.png);
+}
+.fruit4 {
+  background-image: url(images/double_cherry.png);
+}
+.fruit5 {
+  background-image: url(images/ananas.png);
+}
+.fruit6 {
+  background-image: url(images/bananas.png);
+}
+.fruit7 {
+  background-image: url(images/lime.png);
+}
+
+.product p {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: left;
+  margin: 0;
+}
+.product p:nth-child(1) {
+  color: black;
+}
+.product p:nth-child(2) {
+  font-size: 16px;
+}
+.price {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: left;
+}
+
+.product button {
+  border-radius: 20px;
+  border-color: #2f2e33;
+  border-style: solid;
+  border-width: 4px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  padding: 7px 30px;
+  cursor: pointer;
+  background-color: #e06331;
+  color: #eee0d1;
+  cursor: pointer;
+  height: fit-content;
+}
+.product-description-add {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  row-gap: 80px;
+  column-gap: 300px;
+}
+
+.section-phone-article-fruits {
+  background-color: #e06331;
+  height: 894px;
+  border-top: #2f2e33 solid 3px;
+  border-bottom: #2f2e33 solid 3px;
+}
+.background-elements-4 {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+}
+.background-elements-4 div {
+  position: absolute;
+}
+.decoration-yellow-half {
+  background-image: url(images/yellow_half.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 620px;
+  height: 900px;
+  transform: rotate(180deg);
+  left: -10px;
+}
+.decoration-ananas-4 {
+  background-image: url(images/ananas.png);
+  background-size: 100%;
+  width: 231px;
+  height: 324px;
+  left: 1719px;
+  top: 108px;
+}
+.decoration-fruit-4 {
+  background-image: url(images/fruit.png);
+  background-position: top;
+  background-size: 100%;
+  width: 285px;
+  height: 135px;
+  left: 1350px;
+  top: 759px;
+}
+.decoration-cherry-4 {
+  background-image: url(images/double_cherry.png);
+  background-size: 100%;
+  width: 248px;
+  height: 165px;
+  left: 235px;
+  top: 25px;
+}
+.decoration-strawberry-4 {
+  background-image: url(images/strawberry.png);
+  background-size: 100%;
+  width: 176px;
+  height: 200px;
+  left: -60px;
+  top: 565px;
+  transform: rotate(62.69deg);
+}
+.decoration-white-4 {
+  background-image: url(images/decoration_white.png);
+  background-size: 80%;
+  width: 128px;
+  height: 128px;
+}
+.decoration-white-4[id="nr1"] {
+  left: 1382px;
+  top: -20px;
+}
+.decoration-white-4[id="nr2"] {
+  left: 843px;
+  top: 765px;
+  transform: rotate(90deg);
+}
+.phone-title {
+  display: flex;
+}
+.phone-title img {
+  position: relative;
+  width: 332px;
+  height: auto;
+  left: 440px;
+  top: 128px;
+}
+.section-description-4 {
+  font-family: "Raleway", sans-serif;
+  margin-left: 700px;
+  margin-top: 220px;
+  display: flex;
+  flex-direction: column;
+}
+.section-description-4 p {
+  font-weight: 600;
+  font-size: 100px;
+  width: 539px;
+  color: #eee0d1;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 24px;
+}
+.section-description-4 article {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  color: #eee0d1;
+  width: 590px;
+  margin-bottom: 36px;
+}
+
+.section-description-4 button {
+  border-radius: 20px;
+  border-color: #2f2e33;
+  border-style: solid;
+  border-width: 4px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  padding: 7px 30px;
+  cursor: pointer;
+  background-color: #e06331;
+  color: #eee0d1;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.products-title-article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title-section-5 {
+  margin-top: 120px;
+  margin-bottom: 24px;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 120px;
+  text-align: center;
+  color: #e06331;
+}
+.products-title-article article {
+  margin-bottom: 80px;
+  font-family: "Raleway";
+  width: 760px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  color: #1f1c1c;
+}
+.products-slider {
+  display: flex;
+  flex-direction: row;
+  gap: 108px;
+}
+.background-elements-5 {
+  position: absolute;
+}
+.decoration-orange-5 {
+  position: absolute;
+  background-image: url(images/decoratino_orange.png);
+  background-size: 100%;
+  width: 190px;
+  height: 190px;
+}
+.decoration-orange-5[id="nr1"] {
+  left: 1635px;
+  top: 63px;
+}
+.decoration-orange-5[id="nr2"] {
+  left: -55px;
+  top: 886px;
+}
+
+.buttons-slider {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+.arrow-left {
+  background-image: url(icons/arrow-left.svg);
+  background-size: 100%;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  cursor: pointer;
+}
+.arrow-right {
+  background-image: url(icons/arrow-right.svg);
+  background-size: 100%;
+  width: 60px;
+  height: 60px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+.faq-section {
+  background-color: #e06331;
+  height: 890px;
+  border-top: #2f2e33 3px solid;
+  border-bottom: #2f2e33 3px solid;
+}
+.title-section-6 {
+  margin-left: 251px;
+  margin-top: 120px;
+  margin-bottom: 24px;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 120px;
+  color: #eee0d1;
+  margin-bottom: 0;
+}
+.faq-questions {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.question {
+  margin-left: 251px;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 5px solid #eee0d1;
+  font-family: "Raleway";
+  font-style: normal;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 24px;
+  width: 648px;
+  color: #eee0d1;
+}
+.question p {
+  margin: 0;
+}
+.question button {
+  background-image: url(icons/plus.png);
+  background-size: 100%;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  cursor: pointer;
+  align-items: end;
+}
+.background-elements-6 {
+  position: absolute;
+}
+.background-elements-6 div {
+  position: absolute;
+}
+.decoration-yellow-bottom {
+  background-image: url(images/bottom_yellow.png);
+  background-size: 100%;
+  width: 1920px;
+  height: 160px;
+  margin-top: 735px;
+  margin-left: -10px;
+}
+.decoration-card {
+  background-image: url(images/credit_card.png);
+  background-size: 100%;
+  width: 549px;
+  height: 378px;
+  left: 1050px;
+  top: 183px;
+}
+
+.decoration-white-6 {
+  position: absolute;
+  background-image: url(images/decoration_white.png);
+  background-size: 100%;
+  width: 128px;
+  height: 128px;
+}
+
+.decoration-white-6[id="nr1"] {
+  left: 0px;
+  top: 155px;
+}
+.decoration-white-6[id="nr2"] {
+  left: 1808px;
+  top: 506px;
+}
