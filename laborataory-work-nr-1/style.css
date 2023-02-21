@@ -1,22 +1,29 @@
 /* add your CSS here */
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
 
+:root{
+  --main-color: #ff6329;
+  --secondary-color:#f3e1d1;
+  --tertiary-color:#2f2e33;
+}
+
 body {
   background-image: url("images/main-backround.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   padding: 0;
-  margin: 0;
+  margin: 0;font:  sans-serif;
   overflow-x: hidden;
   box-sizing: border-box;
 }
 main {
   display: flex;
   margin: 48px 170px;
+  margin: 48px max(8.85vw, 50px);
 }
 .section-article-buttons-phone {
-  height: 95vh;
+  height:max(46.56vw, 815px);
   overflow-y: hidden;
 }
 .navBar-article-buttons {
@@ -52,7 +59,7 @@ header nav ul li a {
   font-size: 16px;
   line-height: 19px;
   text-decoration: none;
-  color: #e06331;
+  color: var(--main-color);
 }
 header .icons {
   display: flex;
@@ -62,14 +69,25 @@ header .icons {
 .search-icon {
   width: 32px;
   height: 32px;
-  background-image: url("/icons/Search\ Icon.svg");
+  background-image: url("icons/Search\ Icon.svg");
   background-size: cover;
 }
 .cart-icon {
   width: 32px;
   height: 32px;
-  background-image: url("/icons/Cart\ Icon.svg");
+  background-image: url("icons/Cart\ Icon.svg");
   background-size: cover;
+} 
+.burger-block{
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+.burger-block .line{
+  width: 30px;
+  height: 5px;
+  background-color: var(--tertiary-color);
 }
 .backround-elemets {
   width: 100%;
@@ -82,7 +100,7 @@ header .icons {
 .decoration-orange {
   width: 100px;
   height: 100px;
-  left: 70px;
+  left: max(3.64vw, 30px);
   top: 185px;
 }
 .strawberry1 {
@@ -91,18 +109,18 @@ header .icons {
   transform: rotate(83.47deg);
 }
 .strawberry2 {
-  left: 815px;
+  left: max(42.44vw, 690px);
   top: -105px;
   transform: rotate(-89.82deg);
 }
 .decoration-white {
   z-index: 10;
   top: 676px;
-  left: 1778px;
+  left: max(92.6vw, 1341px);
 }
 .pear {
-  left: 915px;
-  top: 645px;
+  left: max(47.65vw, 611px);
+  top: max(33.59vw, 680px);
   transform: rotate(-25.1deg);
 }
 .article-buttons {
@@ -120,27 +138,27 @@ header .icons {
   font-family: "Raleway";
   font-style: normal;
   font-weight: 600;
-  font-size: 120px;
-  line-height: 141px;
+  font-size: max(6.25vw, 70px);
+  line-height: 100%;
   text-align: center;
   padding: 0;
   margin: 0;
-  color: #e06331;
+  color: var(--main-color);
 }
 .article-buttons article {
-  width: 460px;
+  width:max(23.95vw, 340px);
   font-family: "Raleway";
   font-style: normal;
   font-weight: 600;
-  font-size: 14.285px;
-  line-height: 17px;
+  font-size:max(0.72vw, 12px);
+  line-height: 100%;
   text-align: center;
   color: #2f2e33;
 }
 .article-buttons .buttons-conatiner {
   width: fit-content;
   display: flex;
-  gap: 40px;
+  gap: max(2vw, 20px);
 }
 .article-buttons .buttons-conatiner button {
   border-radius: 20px;
@@ -149,14 +167,14 @@ header .icons {
   border-width: 4px;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 18px;
+  font-size: max(0.9375vw, 14px);
   text-align: center;
-  padding: 7px 30px;
+  padding: max(0.364vw, 5px) max(1.56vw, 26px);
   cursor: pointer;
 }
 .article-buttons .buttons-conatiner button:nth-child(1) {
-  background-color: #e06331;
-  color: #f3e1d1;
+  background-color: var(--main-color);
+  color: var(--secondary-color);
 }
 .article-buttons .buttons-conatiner button:nth-child(2) {
   background-color: #f3e1d1;
@@ -172,42 +190,54 @@ header .icons {
   cursor: pointer;
   margin-top: 100px;
 }
-.phone-backround {
-  background-image: url("/laborataory-work-nr-1/images/orange_half.png");
+.orange-half-backround {
+  background-image: url("images/orange_half.png");
   background-size: 850px;
   background-position: 119px;
   position: absolute;
-  left: 1150px;
-  top: -48px;
-  height: 929px;
+  left: max(60vw, 800px);
+  height: 102.5vh;
   background-repeat: no-repeat;
   width: 60%;
   display: flex;
   align-items: center;
 }
-.phone-backround img {
-  width: 242px;
-  height: auto;
+.phone-background{
+  align-items: center;
+  width: 60%;
+  height: 940px;
+  display: flex;
 }
-.phone-backround p {
+.phone1 {
+  position: absolute;
+  background-image: url(images/phone_1.png);
+  background-size: 100%;
+  width: 242px;
+  height: 519px;
+  left: max(61vw, 850px);
+  top:max(9.8vw, 168px);
+}
+.phone-background .vertical-text {
+  position: absolute;
   font-family: "Raleway";
   font-style: normal;
   font-weight: 700;
-  font-size: 23.632px;
+  font-size: max(1.25vw, 18px);
   line-height: 28px;
-  color: #f3e1d1;
-  margin-left: 300px;
+  color: var(--secondary-color);
+  margin-left: max(77vw, 168px);
   transform: rotate(90deg);
+  width: 390px;
 }
 .section-article-buttons-fruits {
   height: 750px;
   position: relative;
 }
 .article-button {
-  height: 80vh;
-  background-color: #e06331;
-  border-top: 3px solid #2f2e33;
-  border-bottom: 3px solid #2f2e33;
+  height: max(40.1vw, 560px);
+  background-color: var(--main-color);
+  border-top: 4px solid var(--tertiary-color);
+  border-bottom: 4px solid var(--tertiary-color);
   display: flex;
   flex-direction: column;
   gap: 36px;
@@ -220,16 +250,16 @@ header .icons {
   margin: 0;
   font-style: normal;
   font-weight: 700;
-  font-size: 32px;
+  font-size: max(1.66vw, 24px);
   line-height: 38px;
   text-align: center;
 }
 .article-button .title {
   font-family: "Raleway";
-  color: #eee0d1;
+  color: var(--secondary-color);
   font-style: normal;
   font-weight: 600;
-  font-size: 90px;
+  font-size: max(4.68vw, 70px);
   line-height: 117px;
   text-align: center;
 }
@@ -239,9 +269,9 @@ header .icons {
   font-family: "Raleway";
   font-style: normal;
   font-weight: 700;
-  font-size: 18px;
+  font-size: max(0.93vw, 14px);
   line-height: 21px;
-  color: #eee0d1;
+  color: var(--secondary-color);
   text-align: center;
 }
 
@@ -256,8 +286,8 @@ header .icons {
   text-align: center;
   padding: 7px 30px;
   cursor: pointer;
-  background-color: #f3e1d1;
-  color: #e06331;
+  background-color: var(--secondary-color);
+  color: var(--main-color);
   cursor: pointer;
 }
 .background-elements-2 {
@@ -280,26 +310,26 @@ header .icons {
   left: -20px;
 }
 .decoration-white-2:nth-child(2) {
-  top: 553px;
-  left: 1770px;
+  top: max(28.8vw, 430px);
+  left: max(92.6vw, 1341px);;
 }
 .fruit {
   z-index: 10;
   background-image: url(images/fruit.png);
   background-size: 100%;
-  width: 285px;
-  height: 188px;
+  width: max(14.8vw, 114px);
+  height: max(9.8vw, 75px);
   top: 48px;
-  left: 1601px;
+  left: max(83.3vw, 840px);
 }
 .banana {
   z-index: 10;
   background-image: url(images/bananas.png);
   background-size: 100%;
-  width: 222px;
-  height: 253px;
+  width: max(11.6vw, 147px);
+  height: max(13.2vw, 168px);
   left: 24px;
-  top: 388px;
+  top: max(20.2vw, 321px);
   transform: rotate(-30.65deg);
 }
 path {
@@ -308,7 +338,7 @@ path {
 
 .section-products {
   font-family: "Raleway";
-  color: #e06331;
+  color: var(--main-color);
   font-style: normal;
   font-weight: 600;
   font-size: 30px;
@@ -356,11 +386,11 @@ path {
 }
 .decoration-orange-3:nth-child(3) {
   top: 430px;
-  left: 1780px;
+  left: max(92.7vw, 1300px);
 }
 .decoration-orange-3:nth-child(4) {
   top: 1200px;
-  left: 1760px;
+  left: max(92.2vw, 1200px);
 }
 .product {
   width: fit-content;
@@ -371,13 +401,13 @@ path {
 }
 
 .product-view {
-  background-size: 187px;
+  background-size: max(9.73vw, 150px);
   background-repeat: no-repeat;
   background-position: center;
   width: 187px;
   height: 279px;
-  padding: 64px 106px;
-  border: #2f2e33 solid 3px;
+  padding: max(3.33vw, 44px) max(5.52vw, 88px);
+  border: var(--tertiary-color) solid 3px;
   border-radius: 30px;
 }
 .fruit1 {
@@ -412,7 +442,7 @@ path {
   margin: 0;
 }
 .product p:nth-child(1) {
-  color: black;
+  color: var(--tertiary-color);
 }
 .product p:nth-child(2) {
   font-size: 16px;
@@ -428,17 +458,17 @@ path {
 
 .product button {
   border-radius: 20px;
-  border-color: #2f2e33;
+  border-color: var(--tertiary-color);
   border-style: solid;
   border-width: 4px;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 18px;
+  font-size: max(0.93vw, 14px)x;
   text-align: center;
-  padding: 7px 30px;
+  padding: 7px max(1.5vw, 20px);
   cursor: pointer;
-  background-color: #e06331;
-  color: #eee0d1;
+  background-color: var(--main-color);
+  color: var(--secondary-color);
   cursor: pointer;
   height: fit-content;
 }
@@ -451,14 +481,14 @@ path {
   display: grid;
   grid-template-columns: auto auto;
   row-gap: 80px;
-  column-gap: 300px;
+  column-gap: max(15.625vw, 200px);
 }
 
 .section-phone-article-fruits {
-  background-color: #e06331;
+  background-color: var(--main-color);
   height: 894px;
-  border-top: #2f2e33 solid 3px;
-  border-bottom: #2f2e33 solid 3px;
+  border-top: var(--tertiary-color) solid 3px;
+  border-bottom: var(--tertiary-color) solid 3px;
 }
 .background-elements-4 {
   width: 100%;
@@ -472,7 +502,7 @@ path {
   background-image: url(images/yellow_half.png);
   background-size: 100%;
   background-repeat: no-repeat;
-  width: 620px;
+  width: max(32.3vw, 340px);
   height: 900px;
   transform: rotate(180deg);
   left: -10px;
@@ -480,9 +510,10 @@ path {
 .decoration-ananas-4 {
   background-image: url(images/ananas.png);
   background-size: 100%;
-  width: 231px;
-  height: 324px;
-  left: 1719px;
+  background-repeat: no-repeat;
+  width: max(12vw, 191px);
+  height: max(16.87vw, 284px);
+  left: max(89.53vw, 1234px);
   top: 108px;
 }
 .decoration-fruit-4 {
@@ -491,15 +522,15 @@ path {
   background-size: 100%;
   width: 285px;
   height: 135px;
-  left: 1350px;
+  left: max(70.31vw, 1170px);
   top: 759px;
 }
 .decoration-cherry-4 {
   background-image: url(images/double_cherry.png);
   background-size: 100%;
-  width: 248px;
-  height: 165px;
-  left: 235px;
+  width: max(12.91vw, 156px);
+  height: max(8.59vw, 104px);
+  left: max(12.23vw, 151px);
   top: 25px;
 }
 .decoration-strawberry-4 {
@@ -518,36 +549,39 @@ path {
   height: 128px;
 }
 .decoration-white-4[id="nr1"] {
-  left: 1382px;
+  left: max(71.97vw, 1082px);
   top: -20px;
 }
 .decoration-white-4[id="nr2"] {
-  left: 843px;
+  left: max(43.9vw, 700px);
   top: 765px;
   transform: rotate(90deg);
 }
 .phone-title {
   display: flex;
 }
-.phone-title img {
-  position: relative;
-  width: 332px;
-  height: auto;
-  left: 440px;
-  top: 128px;
+.phone2 {
+  position: absolute;
+  background-image:url(images/phone_2.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width:max(17.3vw, 281px);
+  height:max(35.26vw, 573px);
+  left: max(21.875vw, 220px);
+  top: max(6.67vw, 148px);
 }
 .section-description-4 {
   font-family: "Raleway", sans-serif;
-  margin-left: 700px;
+  margin-left: max(52vw, 680px);
   margin-top: 220px;
   display: flex;
   flex-direction: column;
 }
 .section-description-4 p {
   font-weight: 600;
-  font-size: 100px;
+  font-size: max(5.2vw, 90px);
   width: 539px;
-  color: #eee0d1;
+  color: var(--secondary-color);
   padding: 0;
   margin: 0;
   margin-bottom: 24px;
@@ -557,14 +591,14 @@ path {
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
-  color: #eee0d1;
+  color: var(--secondary-color);
   width: 590px;
   margin-bottom: 36px;
 }
 
 .section-description-4 button {
   border-radius: 20px;
-  border-color: #2f2e33;
+  border-color: var(--tertiary-color);
   border-style: solid;
   border-width: 4px;
   font-family: "Raleway", sans-serif;
@@ -573,8 +607,8 @@ path {
   text-align: center;
   padding: 7px 30px;
   cursor: pointer;
-  background-color: #e06331;
-  color: #eee0d1;
+  background-color: var(--main-color);
+  color: var(--secondary-color);
   cursor: pointer;
   width: fit-content;
 }
@@ -592,7 +626,7 @@ path {
   font-weight: 600;
   font-size: 120px;
   text-align: center;
-  color: #e06331;
+  color: var(--main-color);
 }
 .products-title-article article {
   margin-bottom: 80px;
@@ -602,12 +636,12 @@ path {
   font-weight: 700;
   font-size: 18px;
   text-align: center;
-  color: #1f1c1c;
+  color: var(--tertiary-color);
 }
 .products-slider {
   display: flex;
   flex-direction: row;
-  gap: 108px;
+  gap: max(5.625vw, 80px);
 }
 .background-elements-5 {
   position: absolute;
@@ -615,12 +649,12 @@ path {
 .decoration-orange-5 {
   position: absolute;
   background-image: url(images/decoratino_orange.png);
-  background-size: 100%;
+  background-size: 80%;
   width: 190px;
   height: 190px;
 }
 .decoration-orange-5[id="nr1"] {
-  left: 1635px;
+  left: max(85.15vw, 1200px);
   top: 63px;
 }
 .decoration-orange-5[id="nr2"] {
@@ -654,10 +688,10 @@ path {
   cursor: pointer;
 }
 .faq-section {
-  background-color: #e06331;
-  height: 890px;
-  border-top: #2f2e33 3px solid;
-  border-bottom: #2f2e33 3px solid;
+  background-color: var(--main-color);
+  height: max(46.35vw, 690px);
+  border-top: var(--tertiary-color) 3px solid;
+  border-bottom: var(--tertiary-color) 3px solid;
 }
 .title-section-6 {
   margin-left: 251px;
@@ -666,27 +700,26 @@ path {
   font-family: "Raleway";
   font-style: normal;
   font-weight: 600;
-  font-size: 120px;
-  color: #eee0d1;
-  margin-bottom: 0;
+  font-size: max(6.25vw, 100px);
+  color: var(--secondary-color);
 }
 .faq-questions {
   display: flex;
+  margin-left: 251px;
   flex-direction: column;
-  gap: 32px;
+  gap: max(1.67vw, 24px);
 }
 .question {
-  margin-left: 251px;
   display: flex;
   flex-direction: row;
-  border-bottom: 5px solid #eee0d1;
+  border-bottom: 5px solid var(--secondary-color);
   font-family: "Raleway";
   font-style: normal;
   justify-content: space-between;
   font-weight: 700;
-  font-size: 24px;
-  width: 648px;
-  color: #eee0d1;
+  font-size: max(1.25vw, 18px);
+  width: max(33.75vw, 548px);
+  color:var(--secondary-color);
 }
 .question p {
   margin: 0;
@@ -694,8 +727,8 @@ path {
 .question button {
   background-image: url(icons/plus.png);
   background-size: 100%;
-  width: 40px;
-  height: 40px;
+  width: max(2.08vw, 32px);
+  height: max(2.08vw, 32px);
   background-color: rgba(0, 0, 0, 0);
   border: none;
   cursor: pointer;
@@ -712,15 +745,16 @@ path {
   background-size: 100%;
   width: 1920px;
   height: 160px;
-  margin-top: 735px;
+  margin-top: max(38.28vw, 640px);
   margin-left: -10px;
 }
 .decoration-card {
   background-image: url(images/credit_card.png);
   background-size: 100%;
-  width: 549px;
-  height: 378px;
-  left: 1050px;
+  background-repeat: no-repeat;
+  width: max(28.59vw, 343px);
+  height: max(19.68vw, 236px);
+  left: max(54.68vw, 950px);
   top: 183px;
 }
 
@@ -739,4 +773,252 @@ path {
 .decoration-white-6[id="nr2"] {
   left: 1808px;
   top: 506px;
+}
+@media only screen and (max-width: 1440px)  {
+  .phone-background{
+    display: none;
+  }
+  .orange-half-backround{
+    display: none;
+  }
+  .section-article-buttons-phone{
+    height: max(56.59vw, 450px);
+  }
+  .article-buttons{
+    height: max(55.55vw, 380px);
+    margin-top: max(1vw, 50px);
+  }
+  .article-buttons p{
+    font-size: max(9.02vw, 40px);
+  }
+  .article-buttons article {
+    font-size: max(1.25vw, 10px);
+    width: max(55.55vw, 240px);
+  }
+  .arrow-down{
+    width:max(2.77vw, 24px);
+    height: max(2.77vw, 24px);
+    margin-top: max(6.94vw, 40px);
+  }
+  .search-icon{
+    background-image: url(icons/search_orange.svg);
+    width: max(2.22vw, 18px);
+    height: max(2.22vw, 18px);
+  }
+  .cart-icon{
+    background-image: url(icons/cart_orange.svg);
+    width: max(2.23vw, 18px);
+    height: max(2.22vw, 18px);
+  }
+  .pear {
+    left: 1100px;
+    top: 600px;
+  }
+  .article-buttons{
+    width: 100%;
+  }
+  .decoration-yellow-half{
+    display: none;
+  }
+  .article-buttons .buttons-conatiner button {
+    border-radius: 20px;
+    border-color: #2f2e33;
+    border-style: solid;
+    border-width: 4px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: max(0.97vw, 10px);
+    text-align: center;
+    padding: max(0.364vw, 5px) max(1.56vw, 26px);
+    cursor: pointer;
+  }
+
+  .section-article-buttons-fruits {
+    height: max(52.08vw, 292px);
+  }
+
+  .article-button{
+    height: max(38.88vw, 292px);
+    gap: max(2.5vw, 16px)
+  }
+  .article-button p{
+    font-size: max(1.66vw, 16px);
+  }
+  .article-button .title {
+    font-size: max(4.86vw, 32px);
+    line-height: max(8.125vw, 38px)
+  }
+  .article-button article{
+    font-size: max(0.72vw, 10px);
+    width: max(41vw, 260px);
+    line-height: max(1.4vw, 12px);
+  }
+  .article-button button{
+    font-size: max(0.97vw, 10px);
+    border-width: 4px;
+    padding: max(0.364vw, 5px) max(1.56vw, 26px);
+  }
+
+  .title-section-3{
+    width: max(49.5vw, 200px);
+    padding: max(6.94vw, 34px);
+  }
+
+  .section-products{
+    height: max(135vw, 1105px);
+  }
+
+  .grid{
+    row-gap: max(5.55vw, 20px);
+    column-gap: max(13.88vw, 20px);
+  }
+
+  .product-view{
+    background-size: max(10.4vw, 60px);
+    padding: max(3.05vw, 20px) max(6.10vw, 40px);
+    width: max(12.98vw, 80px);
+    height: max(19.37vw, 170px);
+  }
+  .product-description-add{
+    gap: max(1.8vw, 12px);
+  }
+  .product{
+    gap: max(1.8vw, 12px);
+  }
+  .product-description p:nth-child(1){
+    font-size: max(1.66vw, 8px);
+  }
+  .product-description p:nth-child(2){
+    font-size: max(1.11vw, 8px);
+  }
+  .product button {
+    font-size: max(0.97vw, 7px);
+    border-width: 4px;
+    padding: max(0.364vw, 2px) max(1.56vw, 4px);
+  }
+
+  .section-phone-article-fruits {
+    display: flex;
+    height: max(62.08vw, 400px);
+  }
+
+  .phone-title {
+    height: max(62.08vw, 400px);
+    width: max(100vw, 390px);
+    align-content: center;
+    justify-content: center;
+  }
+  .section-description-4{
+    margin: 0;
+    justify-content: center;
+  }
+  .section-description-4 p {
+    align-self: center;
+    font-size: max(6.25vw, 32px);
+    width: max(37.43vw, 260px);
+  }
+  .section-description-4 article {
+    font-size: max(1.25vw, 10px);
+    width: max(40.97vw, 260px);
+  }
+  .section-description-4 button {
+    font-size: max(0.97vw, 10px);
+    border-width: 4px;
+    padding: max(0.364vw, 5px) max(1.56vw, 26px);
+  }
+  .phone2{
+    display: none;
+  }
+  .products-title-article p{
+    font-size: max(9.02vw, 40px);
+    margin-top: max(8.33vw, 40px);
+  }
+  .products-title-article article{
+    font-size: max(1.25vw, 10px);
+    width: max(55.55vw, 240px);
+    margin-bottom: max(5.55vw, 30px);
+  }
+  .products-slider {
+    gap: max(5.55vw, 20px);
+  }
+  .buttons-slider{
+    gap: max(5.55vw, 30px);
+    margin-top: max(4.86vw, 20px);
+    margin-bottom: max(4.86vw, 20px);
+  }
+  .arrow-left{
+    width: max(4.16vw, 24px);
+    height: max(4.16vw, 24px);
+  }
+  .arrow-right{
+    width: max(4.16vw, 24px);
+    height: max(4.16vw, 24px);
+  }
+  .product-description p {
+    margin:0;
+    padding: 0;
+  }
+  .product-description .price {
+    maring:0;
+    padding: 0;
+  }
+
+  .faq-section{
+    height: max(47.91vw, 400px);
+  }
+  .title-section-6{
+    font-size: max(9.02vw, 40px);
+    margin-top: max(8.33vw, 50px);
+    margin-left: max(17.4vw, 30px);
+  }
+  .faq-questions{
+    margin-left: max(17.4vw, 30px);
+  }
+  .question{
+    font-size: max(1.25vw, 12px);
+    border-bottom: 3px solid var(--secondary-color);
+    width: max(38.05vw, 260px);
+  }
+  .question button {
+    width: max(2.22vw, 18px);
+    height: max(2.22vw, 18px);
+  }
+
+  
+}
+@media only screen and (max-width: 700px){
+  header nav{display: none;}
+  .burger-block{display: flex;}
+  .backround-elemets{display: none;}
+  .background-elements-2{display: none;}
+  .background-elements-3{display: none;}
+  .background-elements-4{display: none;}
+  .background-elements-5{display: none;}
+  .background-elements-6{display: none;}
+
+  .burger-block{
+    gap: max(0.71vw, 3px);
+  }
+  .burger-block .line{
+    width: max(4.2vw, 24px);
+    height: max(0.71vw, 3px);
+  }
+}
+@media only screen and (max-width: 390px){
+  .arrow-down{
+    margin-top: 40px;
+  }
+  .phone-title{
+    align-items: center;
+    display: flex;
+  }
+  .section-description-4{
+    align-items: center;
+  }
+  .backround-elemets{display: none;}
+  .background-elements-2{display: none;}
+  .background-elements-3{display: none;}
+  .background-elements-4{display: none;}
+  .background-elements-5{display: none;}
+  .background-elements-6{display: none;}
 }
