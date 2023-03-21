@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grosu Damian FAF-201</title> <!-- CHANGE THESE VALUES -->
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body class="light-scheme">
+    <!-- ADD YOUR CODE HERE -->
+    <div class="to-do-list-container">
+      <header>
+        <div class="title-search-bar-theme">
+          <h1>damien's todo list</h1>
+          <div class="form-icons">
+            <form>
+              <input type="text" placeholder="Search.." id="search" class="search-input" name="search">
+              <button type="submit" class="search-button"></button>
+            </form>
+            <button class="theme-button" onclick="toggleColorScheme()"></button>
+          </div>
+        </div>
+      </header>
+      <div class="task-sorting" id="task-sorting">
+        <ul>
+          <li>
+            <p class="text-description" id="in-progress">in progress</p>
+            <span class="line"></span>
+          </li>
+          <li>
+            <p class="text-description" id="done">done</p>
+            <span class="line"></span>
+          </li>
+          <li>
+            <p class="text-description active" id="all">all</p>
+            <span class="line active"></span>
+          </li>
+        </ul>
+      </div>
+      <div class="tasks-to-do">
+        <div class="add-task-label">
+          <form>
+            <input type="text" placeholder="Add a task to do.." id="add" name="add">
+            <button type="submit" class="add-button"></button>
+          </form>
+        </div>
+        <div class="tasks" id="tasks">
+
+          <!-- <div class="to-do-element done">
+            <p class="task-description">HEy afamfamfaogmavav</p>
+            <div class="control-icons">
+              <button class="check-icon"></button>
+              <button class="edit-icon"></button>
+              <button class="delete-icon"></button>
+            </div>
+          </div>
+
+          <div class="to-do-element">
+            <p class="task-description">hello world, how are u?</p>
+            <div class="control-icons">
+              <button class="check-icon"></button>
+              <button class="edit-icon"></button>
+              <button class="delete-icon"></button>
+            </div> -->
+
+          </div>
+        </div>
+        <div class="notifications" id="notifications">
+          <!-- <div class="notification">
+            <div class="column">
+              <div class="notification-icon"></div>
+              <span>text</span>
+           </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

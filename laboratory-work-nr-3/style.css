@@ -1,0 +1,364 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+body {
+  font-family: "Montserrat";
+}
+body .to-do-list-container {
+  padding: 2vw 9.4vw;
+}
+body .to-do-list-container header .title-search-bar-theme {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+body .to-do-list-container header .title-search-bar-theme h1 {
+  font-weight: 600;
+  font-size: 36px;
+}
+body .to-do-list-container header .title-search-bar-theme .form-icons {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+body .to-do-list-container header .title-search-bar-theme .form-icons form {
+  display: flex;
+  justify-content: space-between;
+  width: 33.44vw;
+  border-radius: 20px;
+  padding: 16px 32px;
+}
+body .to-do-list-container header .title-search-bar-theme .form-icons form input {
+  font-size: 18px;
+  font-weight: 300;
+  outline: none;
+  border: none;
+}
+body .to-do-list-container header .title-search-bar-theme .form-icons form .search-button {
+  mask: url(icons/search-icon.svg);
+  background-size: 100%;
+  width: 24px;
+  height: 24px;
+  border: none;
+  cursor: pointer;
+}
+body .to-do-list-container header .title-search-bar-theme .form-icons .theme-button {
+  mask: url(icons/theme-icon.svg);
+  background-size: 100%;
+  width: 24px;
+  height: 24px;
+  border: none;
+  cursor: pointer;
+}
+body .to-do-list-container .task-sorting {
+  margin-bottom: 60px;
+}
+body .to-do-list-container .task-sorting ul {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  padding: 0;
+  margin: 0;
+}
+body .to-do-list-container .task-sorting ul li {
+  cursor: pointer;
+  width: fit-content;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+body .to-do-list-container .task-sorting ul li p {
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  text-align: center;
+  font-weight: 400;
+  transition: all 0.5s ease-in;
+}
+body .to-do-list-container .task-sorting ul li p.active {
+  font-weight: 500;
+}
+body .to-do-list-container .task-sorting ul li .line {
+  width: 60px;
+  height: 4px;
+  border-radius: 20px;
+  transition: all 0.5s ease-in;
+}
+body .to-do-list-container .tasks-to-do .add-task-label {
+  margin-bottom: 32px;
+}
+body .to-do-list-container .tasks-to-do .add-task-label form {
+  display: flex;
+  justify-content: space-between;
+  width: 76.3vw;
+  border-radius: 20px;
+  padding: 24px 32px;
+}
+body .to-do-list-container .tasks-to-do .add-task-label form input {
+  font-size: 18px;
+  font-weight: 300;
+  width: 70vw;
+  outline: none;
+  border: none;
+}
+body .to-do-list-container .tasks-to-do .add-task-label form .add-button {
+  mask: url(icons/add-icon.svg);
+  background-size: 100%;
+  width: 24px;
+  height: 24px;
+  border: none;
+  cursor: pointer;
+}
+body .to-do-list-container .tasks-to-do .tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+body .to-do-list-container .tasks-to-do .tasks .to-do-element {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 76.3vw;
+  border-radius: 20px;
+  padding: 24px 32px;
+}
+body .to-do-list-container .tasks-to-do .tasks .to-do-element.done .check-icon {
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+}
+body .to-do-list-container .tasks-to-do .tasks .to-do-element.is-hidden {
+  display: none;
+}
+body .to-do-list-container .tasks-to-do .tasks .to-do-element p {
+  margin: 0;
+  font-size: 18px;
+}
+body .to-do-list-container .tasks-to-do .tasks .to-do-element .control-icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+body .to-do-list-container .tasks-to-do .tasks .to-do-element .control-icons .check-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+}
+body .to-do-list-container .tasks-to-do .tasks .to-do-element .control-icons .delete-icon {
+  mask: url(icons/delete-icon.svg);
+  background-size: 100%;
+  width: 22px;
+  height: 29px;
+  border: none;
+  cursor: pointer;
+}
+body .to-do-list-container .notifications {
+  position: fixed;
+  top: 30px;
+  right: 20px;
+}
+body .to-do-list-container .notifications:where(.notification .column) {
+  display: flex;
+  align-items: center;
+}
+body .to-do-list-container .notifications .notification {
+  width: 400px;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  border-radius: 20px;
+  padding: 16px 17px;
+  margin-bottom: 10px;
+  justify-content: space-between;
+  animation: show_notify 0.3s ease forwards;
+}
+body .to-do-list-container .notifications .notification .column {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+@keyframes show_notify {
+  0% {
+    transform: translateX(100%);
+  }
+  40% {
+    transform: translateX(-5%);
+  }
+  80% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
+}
+body .to-do-list-container .notifications .notification .notification.hide {
+  animation: hide_notify 0.3s ease forwards;
+}
+@keyframes hide_toast {
+  0% {
+    transform: translateX(-10px);
+  }
+  40% {
+    transform: translateX(0%);
+  }
+  80% {
+    transform: translateX(-5%);
+  }
+  100% {
+    transform: translateX(calc(100% + 20px));
+  }
+}
+body .to-do-list-container .notifications .notification .notification.hide .notification::before {
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 100%;
+  bottom: 0px;
+  left: 0px;
+  animation: progress 5s linear forwards;
+}
+@keyframes progress {
+  100% {
+    width: 0%;
+  }
+}
+body .to-do-list-container .notifications .notification-icon {
+  mask: url(icons/notification.svg);
+  mask-size: auto;
+  width: 24px;
+  height: 24px;
+  mask-repeat: no-repeat;
+}
+
+body.light-scheme {
+  background-color: #E4E3DB;
+}
+body.light-scheme header h1 {
+  color: #113743;
+}
+body.light-scheme header .form-icons form {
+  border: solid 2px #113743;
+}
+body.light-scheme header .form-icons form input {
+  background-color: #E4E3DB;
+  color: #113743;
+}
+body.light-scheme header .form-icons form .search-button {
+  background: #113743;
+}
+body.light-scheme header .theme-button {
+  background: #113743;
+}
+body.light-scheme p {
+  color: #113743;
+}
+body.light-scheme .line {
+  background-color: #6A6A68;
+}
+body.light-scheme .line.active {
+  background-color: #DB5461;
+}
+body.light-scheme .add-task-label form {
+  border: solid 2px #113743;
+}
+body.light-scheme .add-task-label form input {
+  background-color: #E4E3DB;
+  color: #113743;
+}
+body.light-scheme .add-task-label form .add-button {
+  background: #113743;
+}
+body.light-scheme .tasks .to-do-element {
+  border: solid 2px #113743;
+}
+body.light-scheme .tasks .to-do-element.done .check-icon {
+  background-image: url(icons/checked.svg);
+}
+body.light-scheme .tasks p {
+  color: #113743;
+}
+body.light-scheme .tasks .check-icon {
+  border: solid 3px #113743;
+}
+body.light-scheme .tasks .delete-icon {
+  background: #DB5461;
+}
+body.light-scheme .notifications .notification {
+  color: #113743;
+  border: solid #113743 3px;
+  background-color: #E4E3DB;
+}
+body.light-scheme .notifications .notification-icon {
+  background: #113743;
+}
+body.dark-scheme {
+  background-color: #2B2D42;
+}
+body.dark-scheme header h1 {
+  color: #EDF2F4;
+}
+body.dark-scheme header .form-icons form {
+  border: solid 2px #EDF2F4;
+}
+body.dark-scheme header .form-icons form input {
+  background-color: #2B2D42;
+  color: #EDF2F4;
+}
+body.dark-scheme header .form-icons form .search-button {
+  background: #EDF2F4;
+}
+body.dark-scheme header .theme-button {
+  background: #EDF2F4;
+}
+body.dark-scheme p {
+  color: #EDF2F4;
+}
+body.dark-scheme .line {
+  background-color: #8D99AE;
+}
+body.dark-scheme .line.active {
+  background-color: #EF233C;
+}
+body.dark-scheme .add-task-label form {
+  border: solid 2px #EDF2F4;
+}
+body.dark-scheme .add-task-label form input {
+  background-color: #2B2D42;
+  color: #EDF2F4;
+}
+body.dark-scheme .add-task-label form .add-button {
+  background: #EDF2F4;
+}
+body.dark-scheme .tasks .to-do-element {
+  border: solid 2px #EDF2F4;
+}
+body.dark-scheme .tasks .to-do-element.done .check-icon {
+  background-image: url(icons/checked-dark.svg);
+}
+body.dark-scheme .tasks p {
+  color: #EDF2F4;
+}
+body.dark-scheme .tasks .check-icon {
+  border: solid 3px #EDF2F4;
+}
+body.dark-scheme .tasks .delete-icon {
+  background: #EF233C;
+}
+body.dark-scheme .notifications .notification {
+  color: #EDF2F4;
+  border: solid #EDF2F4 3px;
+  background-color: #2B2D42;
+}
+body.dark-scheme .notifications .notification-icon {
+  background: #EDF2F4;
+}
+
+/*# sourceMappingURL=style.css.map */

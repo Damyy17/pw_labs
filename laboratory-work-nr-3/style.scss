@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+$background-color: #E4E3DB;
+$text-color: #113743;
+$placeholder-color: #6A6A68;
+$red-color: #DB5461;
+
+$dark-background-color: #2B2D42;
+$dark-text-color: #EDF2F4;
+$dark-placeholder-color: #8D99AE;
+$dark-red-color: #EF233C;
+
+$scheme-light: $background-color, $text-color, $placeholder-color, $red-color, url(icons/checked.svg);;
+$scheme-dark: $dark-background-color, $dark-text-color, $dark-placeholder-color, $dark-red-color, url(icons/checked-dark.svg);
+
+@mixin color-scheme($bg, $text, $plcholder, $fourthcl, $checked) {
+    background-color: $bg;
+    header {
+        h1 {
+            color: $text;
+        }
+        .form-icons {
+            form{
+                border: solid 2px $text;
+                input{
+                    background-color: $bg;
+                    color: $text;
+                }
+                .search-button{
+                    background: $text;
+                }
+            }
+        }
+        .theme-button{
+            background: $text;
+        }
+    }
+    p{
+        color: $text;
+    }
+    .line{
+        background-color: $plcholder;
+        &.active{
+            background-color: $fourthcl;
+        }
+    }
+    .add-task-label{
+        form{
+            border:solid 2px $text;
+            input{
+                background-color: $bg;
+                color: $text;
+            }
+            .add-button{
+                background: $text;
+            }
+        }
+    }
+    .tasks{
+        .to-do-element{
+            border:solid 2px  $text;
+            &.done .check-icon{
+                background-image: $checked;
+            }
+        }
+        p {
+            color: $text;
+        }
+        .check-icon{
+            border: solid 3px $text;
+        }
+        .delete-icon{
+            background: $fourthcl;
+        }
+    }
+    .notifications{
+        .notification{
+            color: $text;
+            border: solid $text 3px;
+            background-color: $bg;
+        }
+        .notification-icon{
+            background:$text;
+        }
+    }
+}
+
+body {
+    // @include color-scheme($scheme-light... );
+    // background-color: $background-color;
+    font-family: "Montserrat";
+    .to-do-list-container{
+        padding: 2vw 9.4vw;
+        header {
+            .title-search-bar-theme{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                h1 {
+                    font-weight: 600;
+                    font-size: 36px;
+                    // color: $text-color;
+                }
+                .form-icons{
+                    display: flex;
+                    gap : 24px;
+                    align-items: center;
+                    form {
+                        display: flex;
+                        justify-content: space-between;
+                        width: 33.44vw;
+                        // border: solid 2px $text-color;
+                        border-radius: 20px;
+                        padding: 16px 32px;
+                        input {
+                            // background-color: $background-color;
+                            // color: $text-color;
+                            font-size: 18px;
+                            font-weight: 300;
+                            outline: none;
+                            border: none;
+                        }
+                        .search-button{
+                            mask: url(icons/search-icon.svg);
+                            background-size: 100%;
+                            width: 24px;
+                            height: 24px;
+                            // background-color: $text-color;
+                            border: none;
+                            cursor: pointer;
+                        }
+                    }
+                    .theme-button{
+                        mask: url(icons/theme-icon.svg);
+                        background-size: 100%;
+                        width: 24px;
+                        height: 24px;
+                        // background-color: $text-color;
+                        border: none;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .task-sorting{
+            margin-bottom: 60px;
+            ul {
+                display: flex;
+                flex-direction: row;
+                gap: 40px;
+                padding: 0;
+                margin: 0;
+                li {
+                    cursor: pointer;
+                    width: fit-content;
+                    list-style: none;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 5px;
+                    p{
+                        padding: 0;
+                        margin: 0;
+                        font-size: 18px;
+                        // color: $text-color;
+                        text-align: center;
+                        font-weight: 400;
+                        transition: all .5s ease-in;
+                        &.active{
+                            font-weight: 500;
+                        }
+                    }
+                    .line{
+                        width: 60px;
+                        height: 4px;
+                        border-radius: 20px;
+                        // background-color: $placeholder-color;
+                        transition: all .5s ease-in;
+                        &.active{
+                            // background-color: $red-color;
+                        }
+                        
+                    }
+                }
+            }
+        }
+        .tasks-to-do{
+            .add-task-label{
+                margin-bottom: 32px;
+                form {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 76.3vw;
+                    // border: solid 2px $text-color;
+                    border-radius: 20px;
+                    padding: 24px 32px;
+                    input {
+                        // background-color: $background-color;
+                        // color: $text-color;
+                        font-size: 18px;
+                        font-weight: 300;
+                        width: 70vw;
+                        outline: none;
+                        border: none;
+                    }
+                    .add-button{
+                        mask: url(icons/add-icon.svg);
+                        background-size: 100%;
+                        width: 24px;
+                        height: 24px;
+                        border: none;
+                        cursor: pointer;
+                    }
+                }
+            }
+            .tasks{
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                .to-do-element{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 76.3vw;
+                    // border: solid 2px $text-color;
+                    border-radius: 20px;
+                    padding: 24px 32px;
+                    &.done .check-icon{
+                        // background-image: url(icons/checked.svg);
+                        background-size: 80%;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        width: 24px;
+                        height: 24px;
+                        background-color: transparent;
+                    }
+                    &.is-hidden{
+                        display: none;
+                    }
+                    p{
+                        margin: 0;
+                        // color: $text-color;
+                        font-size: 18px;
+                    }
+                    .control-icons{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        gap: 16px;
+                        .check-icon{
+                            width: 24px;
+                            height: 24px;
+                            // border: solid 3px $text-color;
+                            border-radius: 5px;
+                            background-color: transparent;
+                            cursor: pointer;
+                        }
+                        .delete-icon{
+                            mask: url(icons/delete-icon.svg);
+                            background-size: 100%;
+                            width: 22px;
+                            height: 29px;
+                            border: none;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            
+        }
+
+        .notifications{
+            position: fixed;
+            top: 30px;
+            right: 20px;
+            &:where(.notification .column){
+                display: flex;
+                align-items: center;
+            }
+            .notification{
+                .column{
+                    display: flex;
+                    align-items: center;
+                    gap: 16px
+                }
+                width: 400px;
+                position: relative;
+                overflow: hidden;
+                list-style: none;
+                // border: solid $text-color 3px;
+                border-radius: 20px;
+                padding: 16px 17px;
+                margin-bottom: 10px;
+                // background: $background-color;
+                justify-content: space-between;
+                animation: show_notify 0.3s ease forwards;
+                @keyframes show_notify {
+                    0% {
+                    transform: translateX(100%);
+                    }
+                    40% {
+                    transform: translateX(-5%);
+                    }
+                    80% {
+                    transform: translateX(0%);
+                    }
+                    100% {
+                    transform: translateX(-10px);
+                    }
+                }
+            }
+            .notification .notification.hide{
+                animation: hide_notify 0.3s ease forwards;
+                @keyframes hide_toast {
+                    0% {
+                    transform: translateX(-10px);
+                    }
+                    40% {
+                    transform: translateX(0%);
+                    }
+                    80% {
+                    transform: translateX(-5%);
+                    }
+                    100% {
+                    transform: translateX(calc(100% + 20px));
+                }
+            }
+            .notification{
+                &::before{
+                    position: absolute;
+                    content: "";
+                    height: 3px;
+                    width: 100%;
+                    bottom: 0px;
+                    left: 0px;
+                    animation: progress 5s linear forwards;
+                }
+                @keyframes progress {
+                    100% {
+                    width: 0%;
+                    }
+                }
+            }
+            }
+            .notification-icon{
+                mask: url(icons/notification.svg);
+                mask-size: auto;
+                width: 24px;
+                height: 24px;
+                mask-repeat: no-repeat
+            }
+        }
+        
+    }
+}
+
+
+body{
+    &.light-scheme{
+        @include color-scheme($scheme-light... );
+    }
+    &.dark-scheme{
+        @include color-scheme($scheme-dark... );
+    }
+}
