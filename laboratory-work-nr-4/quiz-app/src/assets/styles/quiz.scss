@@ -1,0 +1,55 @@
+$background-color: #FDFDFD;
+$primary-color: #73A9AD;
+$secondary-color: #FF8484;
+$tertiary-color: #8C7284;
+$dark-color: #2C3333;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+.quiz-container {
+    font-family: 'Montserrat', sans-serif;
+    .quiz-title-question-answers{
+        display: flex;
+        justify-content: center;  
+        align-items: center;
+        flex-direction: column;
+        gap: 1vw;
+        .question-counter{
+            font-weight: 600;
+            color: $tertiary-color;
+            font-size: 1vw;
+        }
+        .buttons{
+            display: flex;
+            flex-direction: row;
+            gap: 1vw;
+            button{
+                display: flex;
+                flex-direction: row;
+                gap: 3vw;
+                align-items: center;
+                justify-content: center;
+                font-weight: 600;
+                font-size: 1vw;
+                padding: 1vw 2vw;
+                background-color: $background-color;
+                border: solid 1px $dark-color;
+                border-radius: 5px;
+                width: 32vw;
+                height: 3.95vw;
+                color: $primary-color;
+                &:hover{
+                    background-color: $primary-color;
+                    color: $background-color;
+                    transition: all 0.3s ease-in;
+                    svg{
+                        fill: $background-color;
+                    }
+                }
+                svg{
+                    fill: $primary-color;
+                }
+            }
+        }
+    }
+
+}

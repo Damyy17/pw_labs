@@ -1,0 +1,52 @@
+$background-color: #FDFDFD;
+$primary-color: #73A9AD;
+$secondary-color: #FF8484;
+$tertiary-color: #8C7284;
+$dark-color: #2C3333;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+ 
+body{
+    background-color: $background-color;
+
+    .quizzes-container{
+        font-family: 'Montserrat', sans-serif;
+        padding: 2vw 5vw;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-column-gap: 1vw;
+        grid-row-gap: 1vw;
+        gap: 4vw;
+        .quiz-card{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1vw;
+            padding: 1vw 2vw;
+            width: 18vw;
+            height: 10.2vw;
+            border-radius: 5px;
+            border: solid 1px $dark-color;
+            p{
+                max-width: 16vw;
+                height: fit-content;
+                font-weight: 500;
+                font-size: 1vw;
+                margin: 0;
+            }
+            span{
+                font-weight: 500;
+                font-size: 1vw;
+            }
+            button{
+                font-weight: 600;
+                font-size: 0.8vw;
+                color: $secondary-color;
+                background-color: $background-color;
+                border: solid 1px $dark-color;
+                border-radius: 5px;
+                padding: 1vw 2vw;
+            }
+        }
+    }
+}

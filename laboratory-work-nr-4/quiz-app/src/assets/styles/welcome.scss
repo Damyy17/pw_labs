@@ -1,0 +1,87 @@
+
+$background-color: #FDFDFD;
+$primary-color: #73A9AD;
+$secondary-color: #FF8484;
+$tertiary-color: #8C7284;
+$dark-color: #2C3333;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+body{
+    background-color: $background-color;
+    font-family: "Montserrat", sans-serif;
+    .home-container{
+        height: 100vh;
+        width: 100vw;  
+        margin: 0;
+        background-image: url("../images/background-elements.svg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position-y: bottom;
+        .home-container-information{
+            height: 30vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .title {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .fill-text-title{
+                    position: absolute;
+                    width: fit-content;
+                    padding: 0;
+                    margin: 0;
+                    font-size: 12.16vw;
+                    font-weight: 800;
+                    z-index: 3;
+                    color: #8C728440;
+                }
+                .stroke-text-title{
+                    transform: translateY(3.65vw);
+                    position: absolute;
+                    width: fit-content;
+                    padding: 0;
+                    margin: 0;
+                    z-index: 2;
+                    font-weight: 800;
+                    font-size: 8.47vw;
+                    text-shadow: -1px -1px 0 $dark-color, 1px -1px 0 $dark-color, -1px 1px 0 $dark-color, 1px 1px 0 $dark-color;
+                    color: $background-color;
+                    }
+                }
+            }
+        
+            .description-section {
+                width: 46.94vw;
+                font-size: 1.356vw;
+                font-weight: 400;
+                color: $dark-color;
+            }
+        
+            .continue-button {
+                border: $dark-color 1px solid;
+                margin: 0;
+                display: flex;
+                padding: 0.878vw 1.356vw;
+                background-color: $tertiary-color;
+                width: 25.45vw;
+                justify-content: space-between;
+                border-radius: 5px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                .button-text{
+                    color: $background-color;
+                    font-size: 1vw;
+                    font-weight: 500;
+                    margin: 0;
+                }
+                .continue-icon{
+                    width: 12px;
+                    height: 22px;
+                }
+        
+            }
+        }    
+}    

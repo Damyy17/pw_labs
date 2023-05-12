@@ -1,0 +1,67 @@
+$background-color: #FDFDFD;
+$primary-color: #73A9AD;
+$secondary-color: #FF8484;
+$tertiary-color: #8C7284;
+$dark-color: #2C3333;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+body {
+    background-color: $background-color;
+    font-family: "Montserrat", sans-serif;
+    .register-container {
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+        background-image: url("../images/background-elements-login.svg"), url(../images/background-elements-login-2.svg);
+        background-repeat: no-repeat;
+        background-size: 35%;
+        background-position: left bottom, right top;
+        .register-container-information {
+            height: 50vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .title{
+                font-weight: 600;
+                color: $tertiary-color;
+                font-size: 1.5vw;
+            }
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1vw;
+                label{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    color: $dark-color;
+                    font-weight: 400;
+                    font-size: 1vw;
+                    input{
+                        padding-left: 1vw;
+                        color: $dark-color;
+                        background-color: #FDFDFD;
+                        width: 27.15vw;
+                        height: 3.60vw;
+                        border: solid 1px $dark-color;
+                        border-radius: 5px;
+                        &:focus{
+                            outline: solid 2px $tertiary-color;
+                        }
+                    }
+                }
+                .register-button{
+                    font-weight: 500;
+                    font-size: 1vw;
+                    background-color: #8C7284;
+                    border: solid 1px $dark-color;
+                    border-radius: 5px;
+                    width: 28.52vw;
+                    height: 3.95vw;
+                }
+            }
+        }
+    }
+}
