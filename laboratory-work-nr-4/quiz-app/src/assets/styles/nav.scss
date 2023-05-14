@@ -44,20 +44,29 @@ $dark-color: #2C3333;
             list-style: none;
         }
     }
-    button{
-        background-color: $background-color;
-        border: 1px solid $tertiary-color;
-        border-radius: 5px; 
-        padding: 0.6em 1.2em;
-        font-size: 1vw;
-        a{
+    .user-button{
+        display: flex;
+        flex-direction: row;
+        gap: 1vw;
+        align-items: center;
+        .name-username{
             color: $tertiary-color;
+            font-weight: 500;
+            font-size: 1vw;
+            margin: 0;
         }
-        &:hover{
-            background-color: $tertiary-color;
-            a{
+        .logout-button{
+            background-color: $background-color;
+            border: 1px solid $tertiary-color;
+            border-radius: 5px; 
+            padding: 0.6em 1.2em;
+            font-size: 1vw;
+            color: $tertiary-color;
+            &:hover{
+                background-color: $tertiary-color;
                 color: $background-color;
             }
         }
     }
+    
 }

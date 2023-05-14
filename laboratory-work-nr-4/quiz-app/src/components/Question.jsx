@@ -2,11 +2,11 @@ import { useState } from 'react';
 import '../assets/styles/question.scss';
 import PropTypes from 'prop-types';
 
-function Question({ question}) {
-  const [active, setActive] = useState(false);
-
-  const handleSetActive = (index) => {
-    setActive(index);
+function Question({ question, onAnswerChange}) {
+  const [activeAnswer, setActiveAnswer] = useState('');
+  const handleSetActive = (answer) => {
+    setActiveAnswer(answer);
+    onAnswerChange(answer)
   };
 
   return (
@@ -16,10 +16,10 @@ function Question({ question}) {
       <div className="line"></div>
 
       <div className="grid-answers">
-        {question.answers.map((option, index) => (
-          <div className={`question-label ${index === active ? 'active' : ''}`} onClick={() => handleSetActive(index)} key={index}>
+        {question.answers.map((option) => (
+          <div className={`question-label ${option === activeAnswer ? 'active' : ''}`} onClick={() => handleSetActive(option)} key={option}>
             <p className="answer">{option}</p>
-            <div className={`circle-check ${index === active ? 'active' : ''}`} onClick={() => handleSetActive(index)}></div>
+            <div className={`circle-check ${option === activeAnswer ? 'active' : ''}`} onClick={() => handleSetActive(option)}></div>
           </div>
         ))}
       </div>
@@ -32,7 +32,8 @@ Question.propTypes = {
         id: PropTypes.number.isRequired,
         question: PropTypes.string.isRequired,
         answers: PropTypes.arrayOf(PropTypes.string).isRequired,
-    }).isRequired
+    }).isRequired,
+    onAnswerChange: PropTypes.func.isRequired
 };
 
 export default Question;
