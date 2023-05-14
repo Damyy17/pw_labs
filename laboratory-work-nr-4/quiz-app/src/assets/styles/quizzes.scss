@@ -11,41 +11,85 @@ body{
     .quizzes-container{
         font-family: 'Montserrat', sans-serif;
         padding: 2vw 5vw;
-        display: grid;
-        grid-template-columns: auto auto auto;
-        grid-column-gap: 1vw;
-        grid-row-gap: 1vw;
-        gap: 4vw;
-        .quiz-card{
+        display: flex;
+        flex-direction: column;
+        gap: 1vw;
+        .quizzes-instruments-bar{
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 1vw;
-            padding: 1vw 2vw;
-            width: 18vw;
-            height: 10.2vw;
-            border-radius: 5px;
-            border: solid 1px $dark-color;
-            p{
-                max-width: 16vw;
-                height: fit-content;
-                font-weight: 500;
+            flex-direction: row;
+            gap: 0.5vw;
+            .quiz-number-title{
+                color: $tertiary-color;
                 font-size: 1vw;
+                font-weight: 600;
                 margin: 0;
             }
-            span{
-                font-weight: 500;
-                font-size: 1vw;
-            }
-            button{
-                font-weight: 600;
+            .number-quizzes{
+                background-color: #8C7284;
+                color: $background-color;
                 font-size: 0.8vw;
-                color: $secondary-color;
-                background-color: $background-color;
-                border: solid 1px $dark-color;
+                font-weight: 500;
+                padding: 0.2vw 0.4vw;
                 border-radius: 5px;
-                padding: 1vw 2vw;
+            }
+        }
+        .quizzes{
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 1vw;
+            row-gap: 1vw;
+            gap: 4vw;
+            .quiz-card{
+                background-color: $tertiary-color;
+                border-radius: 10px;
+                background-image: url("../images/bg-elemnts-card.png");
+                background-repeat: no-repeat;
+                background-size: 60%;
+                width: 19.22vw;
+                background-position: left 130% top 170%;
+                .quiz-card-container{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 6.8vw;
+                    padding: 1.35vw 1.8vw;
+                    .title-description-logo{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        .title-description{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: start;
+                            text-align: start;
+                            gap: 0.6vw;
+                            p {
+                                margin: 0;
+                                padding: 0;
+                            }
+                            .quiz-card-title{
+                                font-size: 0.9vw;
+                                font-weight: 700;
+                            }
+                            .description{
+                                font-size: 0.8vw;
+                                max-width: 60%;
+                            }
+                        }
+                        svg{
+                            overflow: visible;
+                        }
+                    }
+        
+                    .start-quiz{
+                        cursor: pointer;
+                        font-weight: 600;
+                        font-size: 0.8vw;
+                        border: none;
+                        text-align: start;
+                        width: 3vw;
+                        background: none;
+                    }
+                }
             }
         }
     }
