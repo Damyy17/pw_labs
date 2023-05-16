@@ -47,6 +47,12 @@ body{
                 background-size: 60%;
                 width: 19.22vw;
                 background-position: left 130% top 170%;
+                &:hover {
+                    transform: translateY(-5px);
+                    transform: scale(1.01);
+                    box-shadow: 0 0 12px rgba($color: $tertiary-color, $alpha: 1.0);
+                    transition: all 0.2s ease-in;
+                }
                 .quiz-card-container{
                     display: flex;
                     flex-direction: column;
