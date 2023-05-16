@@ -8,6 +8,8 @@ import api from '../api/axios'
 function Quizzes() {
     const [quizzes, setQuizzes] = useState([]);
     const navigate = useNavigate();
+    const [sortOrderByTitle, setSortOrderByTitle] = useState('asc');
+    const [sortOrderByNumber, setSortOrderByNumber] = useState('asc');
 
     useEffect(() => {
         const fetchQuizzes = async () => {
@@ -38,19 +40,51 @@ function Quizzes() {
         }
     } 
 
+
+    const handleSortByTitle = () => {
+        const sortedQuizzes = [...quizzes];
+        sortedQuizzes.sort((a, b) => {
+            if (sortOrderByTitle === 'asc') {
+                return a.title.localeCompare(b.title);
+            } else {
+                return b.title.localeCompare(a.title);
+            }
+        });
+        setQuizzes(sortedQuizzes);
+        setSortOrderByTitle(sortOrderByTitle === 'asc' ? 'desc' : 'asc');
+    }
+
+    const handleSortByQuestionsCount = () => {
+        const sortedQuizzes = [...quizzes];
+        sortedQuizzes.sort((a, b) => {
+          if (sortOrderByNumber === 'asc') {
+            return a.questions_count - b.questions_count;
+          } else {
+            return b.questions_count - a.questions_count;
+          }
+        });
+        setQuizzes(sortedQuizzes);
+        setSortOrderByNumber(sortOrderByNumber === 'asc' ? 'desc' : 'asc');
+      }
+
     return(
         <>
             <div className="quizzes-container">
                 <div className="quizzes-instruments-bar">
                     <p className='quiz-number-title'>
-                        Quizzes
+                        Quizzes:
                     </p>
                     <div className='number-quizzes'>
                         {quizzes.length}
                     </div>
-                    {/* <p>
-                        Sorting
-                    </p> */}
+                    <p className="sorting-label">Sorting:</p>
+                    <button className="sort-button-title" onClick={handleSortByTitle}>
+                        ByTitle {sortOrderByTitle === 'asc' ? '▲' : '▼'}
+                    </button>
+
+                    <button className="sort-button-number" onClick={handleSortByQuestionsCount}>
+                        ByNumberOfQuestions {sortOrderByNumber === 'asc' ? '▲' : '▼'}
+                    </button>
                 </div>
                 <div className="quizzes">
                     {quizzes.map((quiz, index) => (
@@ -65,6 +99,9 @@ function Quizzes() {
                                             Are u ready to make 
                                             this fabulous quiz?
                                             </p>
+                                            <p className="number-of-question">
+                                                Number of Questions: {quiz.questions_count}
+                                            </p>
                                         </div>
                                         <div className="logo-card">
                                             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -75,10 +112,6 @@ function Quizzes() {
                                             </svg>
                                         </div>
                                     </div>
-                    
-                                    {/* <span className="quiz-score">
-                                        Number of Questions: {quiz.questions_count}
-                                    </span> */}
 
                                     <button className='start-quiz' onClick={() => handleShowQuiz(quiz.id)}>
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

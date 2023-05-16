@@ -13,6 +13,22 @@ function Nav() {
     const [user, setUser] = useState(null);
 
     useEffect(() => {
+        const playAudio = () => {
+          const audio = new Audio('/src/assets/music/quiz_music.mp3');
+          audio.loop = true;
+          audio.play().catch((error) => {
+            console.log('Autoplay prevented:', error);
+          });
+          return audio;
+        };
+      
+        const audio = playAudio();
+        return () => {
+          audio.pause();
+        };
+      }, []);
+
+    useEffect(() => {
         const storedUser = JSON.parse(localStorage.getItem('user'));
         if (storedUser) {
             setUser(storedUser);

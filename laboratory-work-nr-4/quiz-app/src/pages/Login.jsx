@@ -1,4 +1,4 @@
-import {useState, useEffect} from "react";
+import {useState} from "react";
 import { useNavigate } from "react-router-dom";
 import "../assets/styles/login.scss"
 import api from "../api/axios";
@@ -45,7 +45,7 @@ function Login() {
             <div className="login-container">
                 <div className="login-container-information">
                     <p className="title">
-                        Introduce you to make some magic quizzes
+                        Introduce yourelf to solve some magic quizzes
                     </p>
                     <form onSubmit={handleSubmit}>
                         <label>
